@@ -1,29 +1,14 @@
 {
   "collections": [
     {
-      "id": "collection-abstraction",
-      "name": "Abstraction",
-      "intro": "Placeholder introduction for the Abstraction collection. Replace with the artist\u2019s short description.",
-      "folder": "artworks/collection-abstraction",
+      "id": "collection-floral",
+      "name": "Floral",
+      "intro": "Placeholder introduction for the Floral collection. Replace with the artist\u2019s short description.",
+      "folder": "artworks/collection-floral",
       "artworks": [
         {
           "file": "4211a4c7-9a00-4965-8590-f2d36f391ab7.JPG",
           "title": "Untitled 1",
-          "price": "Price on request"
-        },
-        {
-          "file": "5123de19-f7fa-40c9-af4e-c96173b744ea.JPG",
-          "title": "Untitled 2",
-          "price": "Price on request"
-        },
-        {
-          "file": "53bf76aa-326f-4480-aa8a-ad411fca4d6d.JPG",
-          "title": "Untitled 3",
-          "price": "Price on request"
-        },
-        {
-          "file": "5a7d2374-66f0-4fb7-9b1a-44a03764686e.JPG",
-          "title": "Untitled 4",
           "price": "Price on request"
         },
         {
@@ -74,6 +59,21 @@
           "title": "The Point of Departure",
           "price": "Price on request",
           "description": "The figure occupies only a fraction of the canvas, yet its movement seems to activate the entire space. One arm reaches vertically while the other extends horizontally, creating an almost cruciform moment of balance \u2014 the body poised between grounding and flight. The economy of the composition is particularly important. Unlike the denser works in the Movement collection, here the surrounding emptiness becomes part of the gesture. The sweeping upward marks carry the body\u2019s momentum beyond the figure itself, while the faint trailing lines preserve the movements that brought it to this instant. The horizontal ground anchors the composition, but the red line deliberately breaks that stability. Detached from the figure, it becomes a marker \u2014 a threshold, perhaps even a destination \u2014 introducing tension between where the body is and where it might move next. The Point of Departure captures movement at the instant possibility opens: the body still connected to the ground, but already beginning to leave it."
+        },
+        {
+          "file": "5123de19-f7fa-40c9-af4e-c96173b744ea.JPG",
+          "title": "Untitled",
+          "price": "Price on request"
+        },
+        {
+          "file": "53bf76aa-326f-4480-aa8a-ad411fca4d6d.JPG",
+          "title": "Untitled",
+          "price": "Price on request"
+        },
+        {
+          "file": "5a7d2374-66f0-4fb7-9b1a-44a03764686e.JPG",
+          "title": "Untitled",
+          "price": "Price on request"
         }
       ]
     },
