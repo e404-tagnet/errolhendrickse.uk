@@ -1102,6 +1102,59 @@ button { font-family: inherit; cursor: pointer; }
   border-color: var(--wine-red);
 }
 
+.event-item--featured {
+  display: flex;
+  gap: 1.5rem;
+  align-items: stretch;
+  padding: 0;
+  overflow: hidden;
+}
+
+.event-item--featured .event-media {
+  flex: 0 0 40%;
+  min-width: 160px;
+  max-width: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f7e9ed;
+  padding: 1rem;
+}
+
+.event-item--featured .event-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.event-item--featured .event-body {
+  flex: 1 1 auto;
+  padding: 1.25rem 1.5rem 1.25rem 0;
+}
+
+.event-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.25rem;
+}
+
+@media (max-width: 700px) {
+  .event-item--featured {
+    flex-direction: column;
+  }
+  .event-item--featured .event-media {
+    flex: 0 0 auto;
+    max-width: none;
+    max-height: 220px;
+    padding: 1.25rem;
+  }
+  .event-item--featured .event-body {
+    padding: 1rem 1.25rem 1.25rem;
+  }
+}
+
 /* Empty carousel state */
 .empty-frame {
   background: var(--frame-dark);
