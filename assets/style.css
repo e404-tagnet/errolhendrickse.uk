@@ -1036,6 +1036,86 @@ button { font-family: inherit; cursor: pointer; }
   margin: 0;
 }
 
+.events-list--cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.event-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  background: rgba(220, 214, 208, 0.55);
+  border: 1px solid var(--frame);
+  border-radius: 6px;
+  gap: 1.25rem;
+}
+
+.event-card-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 140px;
+  background: rgba(35, 29, 26, 0.45);
+  border-radius: 4px;
+  padding: 1rem;
+}
+
+.event-card-media img {
+  max-width: 100%;
+  max-height: 120px;
+  object-fit: contain;
+  display: block;
+}
+
+.event-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.event-card-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 2.2vw, 1.5rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.25rem;
+}
+
+.event-card--soon {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 100%;
+}
+
+.event-card--soon .event-card-body {
+  align-items: center;
+}
+
+.event-card .event-address {
+  margin-bottom: 0;
+}
+
+.event-card .event-datetime {
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-bottom: 0.25rem;
+}
+
+.event-card .event-info {
+  margin-bottom: 0.5rem;
+}
+
+.event-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+  margin-top: 0.35rem;
+}
+
 .event-item {
   padding: 1.25rem 1.5rem;
   background: rgba(220, 214, 208, 0.55);
@@ -1190,6 +1270,10 @@ button { font-family: inherit; cursor: pointer; }
 }
 
 @media (min-width: 801px) {
+  .events-list--cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
   .about-row {
     grid-template-columns: minmax(260px, 360px) 1fr;
   }
