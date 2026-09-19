@@ -1180,6 +1180,56 @@ button { font-family: inherit; cursor: pointer; }
   }
 }
 
+/* About page entrance animations */
+.about-anim-ready .about-row h2,
+.about-anim-ready .about-row p,
+.about-anim-ready .about-row .red-line-verse {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.about-anim-ready .about-row .about-reveal-hidden {
+  opacity: 0;
+}
+
+.about-anim-ready .about-row .about-reveal-visible {
+  opacity: 1;
+}
+
+.about-anim-ready .about-row-image img {
+  opacity: 0;
+  transform: scale(0.98);
+  transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+.about-anim-ready .about-row-image img.about-image-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.about-anim-ready .about-row h2.about-reveal-visible {
+  animation: popIn 0.5s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.96) translateY(10px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.about-row p.is-typing::after,
+.about-row .red-line-verse.is-typing::after {
+  content: '|';
+  display: inline-block;
+  margin-left: 2px;
+  color: var(--accent-strong);
+  animation: caretBlink 0.9s step-end infinite;
+}
+
+@keyframes caretBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
 .accent-link {
   display: inline-block;
   color: var(--accent-strong);
