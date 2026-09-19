@@ -1026,6 +1026,11 @@ button { font-family: inherit; cursor: pointer; }
   padding-top: 0;
 }
 
+.red-name {
+  color: var(--dusty-coral);
+  font-weight: 500;
+}
+
 /* Events list */
 .events-list {
   list-style: none;
