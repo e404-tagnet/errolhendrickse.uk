@@ -1,10 +1,10 @@
 (function () {
   'use strict';
 
-  const TYPE_SPEED = 18; // ms per character
-  const PARAGRAPH_GAP = 450; // ms between paragraphs
-  const TITLE_DELAY = 300;
-  const IMAGE_FADE_DELAY = 600;
+  const TYPE_SPEED = 13.5; // ms per character (25% faster than 18)
+  const PARAGRAPH_GAP = 338; // ms between paragraphs (25% faster than 450)
+  const TITLE_DELAY = 225; // ms (25% faster than 300)
+  const IMAGE_FADE_DELAY = 0; // image starts fading in immediately with text
 
   function wait(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -52,6 +52,10 @@
         if (heading) {
           heading.classList.remove('about-reveal-hidden');
           heading.classList.add('about-reveal-visible');
+          if (image) {
+            image.classList.remove('about-image-hidden');
+            image.classList.add('about-image-visible');
+          }
           await wait(TITLE_DELAY);
         }
 
@@ -100,3 +104,4 @@
     init();
   }
 })();
+renamed '/tmp/hermes-snap-1b96dfbba94a.sh.tmp.nUv3lPFdoQ' -> '/tmp/hermes-snap-1b96dfbba94a.sh'
