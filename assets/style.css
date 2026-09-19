@@ -1280,18 +1280,26 @@ button { font-family: inherit; cursor: pointer; }
 
 @media (min-width: 801px) {
   .events-list--cards {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
   .event-card {
     flex-direction: row;
     align-items: stretch;
+    gap: 1.75rem;
+    padding: 1.5rem;
   }
 
   .event-card-media {
-    flex: 0 0 40%;
+    flex: 0 0 220px;
     max-width: 220px;
     min-height: auto;
+    align-self: center;
+  }
+
+  .event-card-media img {
+    max-height: 160px;
   }
 
   .event-card-body {
@@ -1301,6 +1309,7 @@ button { font-family: inherit; cursor: pointer; }
 
   .event-card--soon {
     align-items: center;
+    justify-content: center;
   }
 
   .about-row {
