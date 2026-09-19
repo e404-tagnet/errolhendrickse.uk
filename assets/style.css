@@ -966,6 +966,220 @@ button { font-family: inherit; cursor: pointer; }
   padding-top: 1.25rem;
 }
 
+/* About page horizontal rows */
+.about-page-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2rem, 4vw, 3.5rem);
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: clamp(3rem, 6vw, 5rem) 4vw;
+  border-bottom: 1px solid var(--frame);
+  background: linear-gradient(180deg, rgba(232, 228, 222, 0.72), rgba(218, 212, 204, 0.45));
+}
+
+.about-row-red-line {
+  grid-template-columns: 1fr;
+}
+
+.about-row-artist {
+  grid-template-columns: 1fr;
+}
+
+.about-row-image img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid var(--frame);
+  box-shadow: 0 12px 40px var(--shadow);
+  background: var(--frame-dark);
+  display: block;
+}
+
+.about-row-text {
+  max-width: 640px;
+}
+
+.about-row h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  margin-bottom: 1.25rem;
+  color: var(--text-primary);
+  letter-spacing: -0.04em;
+}
+
+.about-row p {
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+  font-weight: 300;
+}
+
+.about-row .red-line-verse {
+  margin-top: 1.5rem;
+  padding-top: 0;
+}
+
+/* Events list */
+.events-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  padding: 0;
+  margin: 0;
+}
+
+.event-item {
+  padding: 1.25rem 1.5rem;
+  background: rgba(220, 214, 208, 0.55);
+  border: 1px solid var(--frame);
+  border-radius: 6px;
+}
+
+.event-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 0.75rem;
+  margin-bottom: 0.35rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.event-location {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+.event-divider {
+  color: var(--accent-soft);
+  font-weight: 400;
+}
+
+.event-datetime {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.event-address {
+  font-style: normal;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+  font-weight: 300;
+}
+
+.event-info {
+  margin-bottom: 0.75rem;
+}
+
+.event-map-link,
+.event-map-link.is-placeholder {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--accent-strong);
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent-soft);
+  padding-bottom: 1px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.event-map-link.is-placeholder {
+  color: var(--text-muted);
+  border-bottom-color: var(--frame);
+  cursor: default;
+}
+
+.event-map-link:not(.is-placeholder):hover {
+  color: var(--wine-red);
+  border-color: var(--wine-red);
+}
+
+/* Empty carousel state */
+.empty-frame {
+  background: var(--frame-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty-state {
+  color: var(--frame-light);
+  text-align: center;
+  padding: 2rem;
+}
+
+.empty-state p {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+/* Prints & Sketches page sections */
+.gallery-section {
+  padding: 2rem 4vw 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.gallery-section .section-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 801px) {
+  .about-row {
+    grid-template-columns: minmax(260px, 360px) 1fr;
+  }
+
+  .about-row-red-line {
+    grid-template-columns: minmax(260px, 360px) 1fr;
+  }
+
+  .about-row-red-line .about-row-image { order: 1; }
+  .about-row-red-line .about-row-text { order: 2; }
+
+  .about-row-artist {
+    grid-template-columns: 1fr minmax(260px, 360px);
+  }
+
+  .about-row-artist .about-row-text { order: 1; }
+  .about-row-artist .about-row-image { order: 2; }
+
+  .about-row-events {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 800px) {
+  .about-row {
+    text-align: center;
+  }
+  .about-row-image {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  .about-row-text {
+    margin: 0 auto;
+  }
+  .event-meta {
+    justify-content: center;
+  }
+  .event-address,
+  .event-info {
+    text-align: center;
+  }
+}
+
 .accent-link {
   display: inline-block;
   color: var(--accent-strong);

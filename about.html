@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <title>Errol Hendrickse — About & Enquire</title>
-  <link rel="stylesheet" href="assets/style.css?v=26j" />
+  <link rel="stylesheet" href="assets/style.css?v=26k" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@400;500;600;700;800;900&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet" />
@@ -17,45 +17,84 @@
     <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">Menu</button>
     <nav class="site-nav" aria-label="Main">
       <a href="index.html">Home</a>
-      <a href="collection.html" aria-current="page">Collections</a>
-      <a href="about.html">About</a>
+      <a href="collection.html">Collections</a>
+      <a href="prints-sketches.html">Prints & Sketches</a>
+      <a href="about.html" aria-current="page">About</a>
     </nav>
   </header>
 
-  <main>
-    <section id="about-red-line" class="about-redline-section" aria-labelledby="about-title">
-      <div class="about-text">
-        <h2 id="about-title">About the Artist</h2>
+  <main class="about-page-main">
+    <section id="about-red-line" class="about-row about-row-red-line" aria-labelledby="red-line-title">
+      <div class="about-row-image about-row-image-left">
+        <img src="artworks/Liberty/lb2.jpg" alt="" loading="lazy" />
+      </div>
+      <div class="about-row-text">
+        <h2 id="red-line-title">The Red Line & Signature</h2>
+        <p>A defining element throughout Errol Hendrickse's work is the recurring presence of the red line, completed by his distinctive red signature. Neither is used as decoration. Together they form a continuous visual language that runs throughout the collection.</p>
+        <p>The red line appears in many forms, sometimes as a single uninterrupted gesture, sometimes fragmented, almost disappearing beneath layers of paint before resurfacing elsewhere. It is not intended to represent one fixed idea. Instead, it speaks of the invisible threads that connect us: memory, resilience, vulnerability, identity and the enduring human capacity to survive.</p>
+        <p>The red signature completes that journey. Rather than existing outside the painting as a mark of ownership, the signature is treated as the final red gesture. It belongs to the same visual language as the red line, becoming its conclusion rather than its addition.</p>
+        <p class="red-line-verse">The red line begins the conversation.<span>The red signature brings it to rest.</span></p>
+      </div>
+    </section>
+
+    <section id="about-the-artist" class="about-row about-row-artist" aria-labelledby="artist-title">
+      <div class="about-row-text">
+        <h2 id="artist-title">About the Artist</h2>
         <p>Errol Hendrickse is a British contemporary artist whose work explores the intersections of memory, identity, psychological resilience and the human condition. Through expressive abstraction and figurative painting, he investigates the fragile space between what is seen and what is experienced, creating paintings that speak to both personal and universal narratives.</p>
         <p>Originally trained in Textile Design in the early 1990s, Hendrickse developed an early appreciation for structure, rhythm and surface. Following many years working as a psychotherapist, he returned to painting with a renewed understanding of human emotion and the complexities of psychological experience. Working predominantly in oil, charcoal and mixed media, he builds paintings through layering, erasure, reconstruction and mark-making, allowing every surface to retain the history of its making.</p>
         <p>His abstract works are characterised by sweeping gestural marks and dynamic compositions that evoke emotional states and the invisible architecture of thought and memory. Alongside these, his monochromatic portraits explore themes of masculinity, vulnerability and emotional silence, while his recent figurative paintings examine identity, cultural heritage and belonging.</p>
       </div>
-      <div class="red-line-images" aria-hidden="true">
-        <img src="artworks/Liberty/lb2.jpg" alt="" loading="lazy" />
-        <img src="artworks/Liberty/lb4.jpg" alt="" loading="lazy" />
-      </div>
-      <div class="red-line-text">
-        <div>
-          <h2>The Red Line & Signature</h2>
-          <p>A defining element throughout Errol Hendrickse's work is the recurring presence of the red line, completed by his distinctive red signature. Neither is used as decoration. Together they form a continuous visual language that runs throughout the collection.</p>
-          <p>The red line appears in many forms, sometimes as a single uninterrupted gesture, sometimes fragmented, almost disappearing beneath layers of paint before resurfacing elsewhere. It is not intended to represent one fixed idea. Instead, it speaks of the invisible threads that connect us: memory, resilience, vulnerability, identity and the enduring human capacity to survive.</p>
-          <p>The red signature completes that journey. Rather than existing outside the painting as a mark of ownership, the signature is treated as the final red gesture. It belongs to the same visual language as the red line, becoming its conclusion rather than its addition.</p>
-          <p class="red-line-verse">The red line begins the conversation.<span>The red signature brings it to rest.</span></p>
-        </div>
-        <div class="red-line-closing-rule" aria-hidden="true">
-          <img src="artworks/red-line-hand6.png" alt="" loading="lazy" />
-        </div>
+      <div class="about-row-image about-row-image-right">
+        <img src="artworks/about/ABOUT-1.jpg" alt="" loading="lazy" onerror="this.src='assets/placeholder-bio.svg';this.onerror=null;" />
       </div>
     </section>
 
-    <section id="contact" class="contact-section">
-      <h2>Acquire / Enquire</h2>
-      <p>For sales, commissions, and exhibition enquiries, please contact the gallery.</p>
-      <div class="contact-card">
-        <a class="accent-link" href="mailto:studio@errolhendrickse.uk">studio@errolhendrickse.uk</a>
+    <section id="events-showings" class="about-row about-row-events" aria-labelledby="events-title">
+      <div class="about-row-text">
+        <h2 id="events-title">Events & Showings</h2>
+        <ul class="events-list">
+          <li class="event-item">
+            <div class="event-meta">
+              <span class="event-location">London Gallery Space</span>
+              <span class="event-divider" aria-hidden="true">|</span>
+              <span class="event-datetime">Spring 2027 — date TBC</span>
+            </div>
+            <address class="event-address">123 Art Street, London, UK</address>
+            <p class="event-info">Solo exhibition of recent paintings. Details coming soon.</p>
+            <a class="event-map-link" href="https://www.google.com/maps/search/?api=1&query=123+Art+Street+London" target="_blank" rel="noopener">View map →</a>
+          </li>
+          <li class="event-item">
+            <div class="event-meta">
+              <span class="event-location">Open Studios Weekend</span>
+              <span class="event-divider" aria-hidden="true">|</span>
+              <span class="event-datetime">Summer 2027 — date TBC</span>
+            </div>
+            <address class="event-address">Studio address to be confirmed</address>
+            <p class="event-info">Meet the artist and view works in progress.</p>
+            <a class="event-map-link" href="https://www.google.com/maps" target="_blank" rel="noopener">View map →</a>
+          </li>
+          <li class="event-item">
+            <div class="event-meta">
+              <span class="event-location">Group Show — Curated Selection</span>
+              <span class="event-divider" aria-hidden="true">|</span>
+              <span class="event-datetime">Autumn 2027 — date TBC</span>
+            </div>
+            <address class="event-address">Venue to be announced</address>
+            <p class="event-info">New works alongside fellow contemporary painters.</p>
+            <span class="event-map-link is-placeholder">Map coming soon</span>
+          </li>
+        </ul>
       </div>
     </section>
   </main>
+
+  <section id="contact" class="contact-section">
+    <h2>Acquire / Enquire</h2>
+    <p>For sales, commissions, and exhibition enquiries, please contact the gallery.</p>
+    <div class="contact-card">
+      <a class="accent-link" href="mailto:studio@errolhendrickse.uk">studio@errolhendrickse.uk</a>
+    </div>
+  </section>
 
   <footer class="site-footer">
     <p>© <span id="year"></span> Errol Hendrickse. All rights reserved.</p>
@@ -84,5 +123,3 @@
   </script>
 </body>
 </html>
-renamed '/tmp/hermes-snap-22311360f9cc.sh.tmp.u1fVxdTlF9' -> '/tmp/hermes-snap-22311360f9cc.sh'
-renamed '/tmp/hermes-snap-ada6007bbe48.sh.tmp.Yh2uOdpkB6' -> '/tmp/hermes-snap-ada6007bbe48.sh'

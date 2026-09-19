@@ -4,9 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-  <title>Errol Hendrickse — Collection View</title>
+  <title>Errol Hendrickse — Prints & Sketches</title>
   <link rel="stylesheet" href="assets/style.css?v=26k" />
-  <link rel="stylesheet" href="assets/collection.css?v=5" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@400;500;600;700;800;900&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet" />
@@ -18,42 +17,52 @@
     <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">Menu</button>
     <nav class="site-nav" aria-label="Main">
       <a href="index.html">Home</a>
-      <a href="collection.html" aria-current="page">Collections</a>
-      <a href="prints-sketches.html">Prints & Sketches</a>
+      <a href="collection.html">Collections</a>
+      <a href="prints-sketches.html" aria-current="page">Prints & Sketches</a>
       <a href="about.html">About</a>
     </nav>
   </header>
 
   <main>
-    <section id="collection-overview" class="collection-overview" aria-labelledby="collection-name">
+    <section id="prints-sketches-intro" class="collection-overview" aria-labelledby="prints-sketches-title">
       <div class="overview-text">
-        <h2 id="collection-name" class="collection-name">Collection</h2>
-        <p id="collection-desc" class="collection-intro">Select a collection to view its paintings.</p>
-      </div>
-      <div class="overview-thumbs" id="overview-thumbs" aria-label="Collection thumbnails">
-        <!-- thumbnails injected by JS -->
-      </div>
-      <div class="collection-overview-controls">
-        <button id="prev-collection" class="control-btn arrow-only" aria-label="Previous collection">←</button>
-        <button id="next-collection" class="control-btn arrow-only" aria-label="Next collection">→</button>
+        <h2 id="prints-sketches-title" class="collection-name">Prints & Sketches</h2>
+        <p id="prints-sketches-desc" class="collection-intro">Limited edition prints and original sketches available to view and acquire. More works will be added to these carousels soon.</p>
       </div>
     </section>
 
-    <section id="artwork-detail" class="artwork-detail" aria-labelledby="artwork-title">
-      <div class="detail-image">
-        <img id="detail-img" src="" alt="" loading="lazy" />
-        <div class="detail-image-nav">
-          <button id="prev-artwork" class="control-btn arrow-only" aria-label="Previous artwork">←</button>
-          <button id="next-artwork" class="control-btn arrow-only" aria-label="Next artwork">→</button>
-        </div>
+    <section id="prints" class="gallery-section" aria-labelledby="prints-title">
+      <div class="section-header">
+        <h3 id="prints-title" class="collection-name">Prints</h3>
+        <p class="collection-intro">Limited edition prints from selected paintings.</p>
       </div>
-      <div class="detail-info">
-        <h3 id="artwork-title" class="artwork-title">Artwork Title</h3>
-        <span id="artwork-price" class="artwork-price"></span>
-        <div id="artwork-description" class="artwork-description">
-          <!-- description injected by JS -->
+      <div class="gallery-stage">
+        <button class="image-nav" aria-label="Previous print" data-target="prints-track" data-dir="-1">←</button>
+        <div class="carousel-viewport">
+          <div class="carousel-track" id="prints-track">
+            <!-- Prints carousel items will be injected here -->
+          </div>
         </div>
+        <button class="image-nav" aria-label="Next print" data-target="prints-track" data-dir="1">→</button>
       </div>
+      <div class="gallery-dots" id="prints-dots"></div>
+    </section>
+
+    <section id="sketches" class="gallery-section" aria-labelledby="sketches-title">
+      <div class="section-header">
+        <h3 id="sketches-title" class="collection-name">Sketches</h3>
+        <p class="collection-intro">Original sketches and studies.</p>
+      </div>
+      <div class="gallery-stage">
+        <button class="image-nav" aria-label="Previous sketch" data-target="sketches-track" data-dir="-1">←</button>
+        <div class="carousel-viewport">
+          <div class="carousel-track" id="sketches-track">
+            <!-- Sketches carousel items will be injected here -->
+          </div>
+        </div>
+        <button class="image-nav" aria-label="Next sketch" data-target="sketches-track" data-dir="1">→</button>
+      </div>
+      <div class="gallery-dots" id="sketches-dots"></div>
     </section>
   </main>
 
@@ -76,8 +85,8 @@
     <iframe title="Rickroll" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
   </div>
 
-  <script src="assets/collection.js?v=4"></script>
   <script src="assets/rickroll.js"></script>
+  <script src="assets/prints-sketches.js"></script>
   <script>
     (function () {
       const menuToggle = document.querySelector('.menu-toggle');
