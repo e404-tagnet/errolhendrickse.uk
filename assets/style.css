@@ -821,6 +821,10 @@ button { font-family: inherit; cursor: pointer; }
   margin-top: 0.4rem;
 }
 
+.red-line-verse {
+  color: var(--accent-strong);
+}
+
 /* About + Red Line combined */
 .about-redline-section {
   display: grid;
@@ -1277,6 +1281,26 @@ button { font-family: inherit; cursor: pointer; }
 @media (min-width: 801px) {
   .events-list--cards {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .event-card {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .event-card-media {
+    flex: 0 0 40%;
+    max-width: 220px;
+    min-height: auto;
+  }
+
+  .event-card-body {
+    flex: 1 1 auto;
+    justify-content: center;
+  }
+
+  .event-card--soon {
+    align-items: center;
   }
 
   .about-row {

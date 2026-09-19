@@ -24,10 +24,10 @@
 
   function collectTextNodes(root) {
     const paragraphs = [];
-    root.querySelectorAll('p, .red-line-verse').forEach(p => {
-      const clone = p.cloneNode(true);
+    root.querySelectorAll('p:not(.red-line-verse), .red-line-verse span').forEach(el => {
+      const clone = el.cloneNode(true);
       const text = clone.textContent.trim();
-      if (text) paragraphs.push({ element: p, text });
+      if (text) paragraphs.push({ element: el, text });
     });
     return paragraphs;
   }
