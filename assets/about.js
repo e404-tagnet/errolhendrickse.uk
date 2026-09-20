@@ -104,4 +104,3 @@
     init();
   }
 })();
-renamed '/tmp/hermes-snap-1b96dfbba94a.sh.tmp.nUv3lPFdoQ' -> '/tmp/hermes-snap-1b96dfbba94a.sh'
